@@ -1,32 +1,39 @@
 import React from 'react';
-import {useQuery} from '@tanstack/react-query'
+import {useInfiniteQuery} from '@tanstack/react-query';
+
+const getCharacters = async ({ pageParam = 1 }) =>  {
+    return await fetch(`https://rickandmortyapi.com/api/character?page=${pageParam}`)
+        .then((res) => res.json())
+        .then(data => ({ data: data.results, nextPage: data.info.next }));
+};
+
+
+
 const Characters = () => {
+    
 
-    const getCharacters = () =>  {
-        return fetch('https://rickandmortyapi.com/api/character')
-            .then((res) => res.json())
-            .then((data) => {
-                return data.results.map((character) => ({
-                    id: character.id,
-                    name: character.name,
-                    img: character.image,
-                }));
-            });
-    }
+    const {
+      data,
+      error,
+      fetchNextPage,
+      hasNextPage,
+      isFetching,
+      isFetchingNextPage,
+    } = useInfiniteQuery('character', getCharacters);
 
-    const { isLoading, error, data } = useQuery({ queryKey: ['character'], queryFn: getCharacters })
-
-    if (isLoading) return 'Cargando...'
+    if (isFetching && !isFetchingNextPage) return 'Cargando...'
 
     if (error) return 'Ocurrio un error: ' + error.message
-
+    
     return (
         <div>
             {data.map((character) => (
-                <p>{character.name}</p>
-            ))}
+                
+                    <p key={character.id}>{character.name}</p>
+                )
+            )}
         </div>
     );
-};
+};    
 
 export default Characters;
