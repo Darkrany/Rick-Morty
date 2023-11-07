@@ -49,3 +49,76 @@ body{
   }
 }
 
+.card {
+  width: 215px;
+  height: min-content;
+  transition: all .3s;
+  position: relative;
+  border-radius: .5rem 2rem;
+  box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  margin-right: 21px;
+  margin-bottom: 32px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.img {
+  transition: all .3s;
+  width: 100%;
+  margin: rem auto;
+}
+
+.img:hover {
+  transform: scale(1);
+}
+
+.img-container {
+  display: grid;
+  border-radius: .5rem 2rem;
+  height: 270px;
+  overflow: hidden;
+}
+
+.description {
+  position: absolute;
+  bottom: .5rem;
+  left: .5rem;
+  text-align: start;
+  padding: .5rem 1em;
+  width: 90%;
+  transition: all 0.5s ease;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  border-radius: .5rem 2rem;
+  background-color: #02afc5;
+  
+}
+
+.description:hover {
+  transform: perspective(100px) translateX(7px) rotateX(3deg) rotateY(3deg) scale(1);
+  box-shadow: none;
+}
+
+.title {
+  color: aliceblue;
+  font-size: 1rem; /* Ajusta el tamaño de fuente según tus necesidades */
+  white-space: nowrap; /* Evita el salto de línea */
+  overflow: hidden; /* Oculta el texto que desborda */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para el texto que no cabe */
+  position: relative; /* Establece la posición relativa para poder ajustar el margen */
+  top: -5x; /* Ajusta la posición vertical según tus necesidades */
+ 
+}
+
+
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+  gap: 20px; /* Espacio entre tarjetas */
+}

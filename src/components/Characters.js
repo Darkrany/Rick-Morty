@@ -67,16 +67,27 @@ const getCharacters = async ({ pageParam }) => {
 
 
     return (
-        <div>
+        <>
+        <div className="card-container">
             {
                 data.pages.map((group) =>
-                    group.results.map((character) =>
-                        <p key={character.id}>{character.name}</p>
-                    )
+                group.results.map((character) =>
+                <div className="card" key={character.name}>
+                    <div className="img-container">
+                    <img className="img" src={character.image} alt={character.image}></img>
+                    <div className ="description card">
+                    <span className="title">{character.name}</span>
+                    </div>
+                    </div>
+                </div>
+                    
+                        )
                 )
             }
-            <button onClick={() =>fetchNextPage()}>Cargar más</button>
+            
         </div>
+        <button onClick={() =>fetchNextPage()}>Cargar más</button>
+        </>
     );
 };
 
