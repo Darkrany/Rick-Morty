@@ -104,7 +104,7 @@ body{
 }
 
 .title {
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   font-size: 1rem; /* Ajusta el tamaño de fuente según tus necesidades */
   white-space: nowrap; /* Evita el salto de línea */
   overflow: hidden; /* Oculta el texto que desborda */
