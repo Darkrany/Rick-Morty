@@ -86,7 +86,7 @@ const getCharacters = async ({ pageParam }) => {
             }
             
         </div>
-        <button onClick={() =>fetchNextPage()}>Cargar más</button>
+        <button class="button-53" role="button" onClick={() =>fetchNextPage()}>Cargar más</button>
         </>
     );
 };
