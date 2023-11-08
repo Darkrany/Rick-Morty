@@ -3,8 +3,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  width: 500px; 
+  height: auto;
 }
 
 
@@ -88,7 +88,7 @@ body{
   left: .5rem;
   text-align: start;
   padding: .5rem 1em;
-  width: 90%;
+  width: 70%;
   transition: all 0.5s ease;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -126,7 +126,7 @@ body{
 
 
 .button-53 {
-  background-color: #3DD1E7;
+  background-color: #02afc5;
   border: 0 solid #E5E7EB;
   box-sizing: border-box;
   color: #000000;
