@@ -13,11 +13,17 @@ function App() {
 
       <header className="App-header">
           <div className="main"></div>
-          <Header/>
+
           <BrowserRouter>
+
+          <Header/>
+
           <Routes>
+
             <Route index element={<Characters/>} />
-            <Route path="details/:id" element={<Details />} />
+
+            <Route path="details/:id" element={<Details />} 
+            />
           </Routes>
         </BrowserRouter>
 

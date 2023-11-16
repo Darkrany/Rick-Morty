@@ -49,7 +49,7 @@ const Characters = () => {
           ))
         )}
       </div>
-      <button class="button-53" role="button" onClick={() => fetchNextPage()}>
+      <button className="button-53" role="button" onClick={() => fetchNextPage()}>
         Cargar más
       </button>
     </>
