@@ -1,5 +1,7 @@
 import React from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { Link } from 'react-router-dom';
+
 
 const Characters = () => {
   const getCharacters = async ({ pageParam }) => {
@@ -30,6 +32,7 @@ const Characters = () => {
       <div className="card-container">
         {data.pages.map((group) =>
           group.results.map((character) => (
+          <Link key={character.id} to={`/details/${character.id}`}>
             <div className="card" key={character.name}>
               <div className="img-container">
                 <img
@@ -42,6 +45,7 @@ const Characters = () => {
                 </div>
               </div>
             </div>
+            </Link>
           ))
         )}
       </div>
