@@ -18,7 +18,7 @@ body {
     z-index: 2;
     display: grid;
     height: calc(100vh - 8em);
-    padding: 4em;
+    /* padding: 4em; */
     grid-column-gap: 8em;
     grid-template-columns: 50px 1fr 1fr 200px;
     /* grid-template-rows: 230px 100px 1fr 1fr 1fr; */

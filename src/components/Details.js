@@ -55,6 +55,8 @@ export default function Details() {
               <h3 className="character-label">Género: {data.gender}</h3>
               <h3 className="character-label">Especie: {data.species} </h3>
               <h3 className="character-label">Estado: {data.status}</h3>
+
+            
             </div>
           </div>
 

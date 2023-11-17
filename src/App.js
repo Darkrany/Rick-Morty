@@ -9,13 +9,15 @@ import Details from './components/Details'
 function App() {
   return (
 
+  <>
+          
+
     <div className="App">
 
       <header className="App-header">
           <div className="main"></div>
-
+      
           <BrowserRouter>
-
           <Header/>
 
           <Routes>
@@ -31,6 +33,7 @@ function App() {
 
       </header>
     </div>
+    </>
   );
 }
 
