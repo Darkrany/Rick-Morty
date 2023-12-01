@@ -88,7 +88,7 @@ const Characters = () => {
 
           setStatus(STATUS_OPTIONS[index].value)
         }}>
-          {STATUS_OPTIONS.map(o => <option value={o.value}>{o.label}</option>)}
+          {STATUS_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
         </select>
 
 
