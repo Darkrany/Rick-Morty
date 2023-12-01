@@ -3,6 +3,8 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { Link } from 'react-router-dom';
 import { useDebounce } from "use-debounce";
 
+
+
 const STATUS_OPTIONS = [
   {
     label: 'Desconocido',
@@ -42,10 +44,7 @@ const Characters = () => {
     return res.json();
   };  
 
-  // const searchCharacters = async (name) => {
-  //   const res = await fetch(`https://rickandmortyapi.com/api/character?name=${name}`);
-  //   return res.json();
-  // };
+
 
   const handleChange = event => {
     setSearch(event.target.value);
@@ -75,6 +74,7 @@ const Characters = () => {
      
 
         <input id="text" 
+        className="search"
         type="search" 
         placeholder="Busqueda de personaje..." 
         onChange={handleChange}
