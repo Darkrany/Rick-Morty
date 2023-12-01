@@ -191,7 +191,7 @@ body{
   transition: 200ms ease-in;
   padding-left: 1rem;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -200,6 +200,26 @@ body{
   color: #000000;
   opacity: 0.5;
 }
+
+.select {
+  height: 30px;
+  width: 130px;
+  border-radius: 8px;
+  border: 2px solid #02afc5;
+  outline: none;
+  transition: 200ms ease-in;
+  padding-left: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+
+
+.select::placeholder {
+  color: #000000;
+  opacity: 0.5;
+}
+
 
 
 

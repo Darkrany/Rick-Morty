@@ -7,7 +7,7 @@ import { useDebounce } from "use-debounce";
 
 const STATUS_OPTIONS = [
   {
-    label: 'Desconocido',
+    label: 'Estado',
     value: ''
   },
   
@@ -74,6 +74,7 @@ const Characters = () => {
      
 
         <input id="text" 
+        name="search"
         className="search"
         type="search" 
         placeholder="Busqueda de personaje..." 
@@ -81,14 +82,15 @@ const Characters = () => {
         value={search}     
         />
 
-        <select onChange={e => {
+
+        <select className="select" onChange={e => {
           const index = e.target.selectedIndex;
 
           setStatus(STATUS_OPTIONS[index].value)
         }}>
           {STATUS_OPTIONS.map(o => <option value={o.value}>{o.label}</option>)}
         </select>
-        <p>{status}</p>
+
 
 
 
